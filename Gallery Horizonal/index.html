@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery Horizonal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body>
+
+        <div id="app">
+                <div class="container">
+                  <div class="gallery">
+                    <div class="gallery__inner" :style="galleryTransformStyle">
+                      <div class="figure" v-for="(img, i) in gallery" :key="i" :style="figureStyle(i)">
+                        <img :src="img" class="image" />
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-bar__inner" :style="progressBarStyle"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
